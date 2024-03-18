@@ -150,7 +150,7 @@ function FileUploader() {
                         <p className=" text-lg leading-8 text-gray-600">
                             上传 HTML 文件即可获得所有 Memo 的 md 格式压缩包<br />
                             💡如果你需要上传到 Heptabase 中，可以将所有 md 文件和 <code> file </code> 文件夹放在同一个目录下，<br /> 然后将 file 和 md 文件一起打包成 <code>zip</code> 格式，文件结构如下：
-                            <Image src={fileImg} alt='文件夹结构示意图' />
+                            <Image className='max-h-20 w-fit' src={fileImg} alt='文件夹结构示意图' />
                             最后在 Heptabase 中选择「导入 Obsidian」笔记完成导入。
                         </p>
                     </li>
