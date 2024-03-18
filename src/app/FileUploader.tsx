@@ -73,7 +73,8 @@ function FileUploader() {
         strings.forEach((str, i) => {
             const title = str.split('\n')[0]
             // 在 zip 文件中添加一个新的 md 文件
-            zip.file(`${i + 1}.md`, str);
+            const newStr = str.replace('\\', '')
+            zip.file(`${i + 1}.md`, newStr);
         });
 
         // 生成 zip 文件并保存到用户设备
@@ -123,7 +124,7 @@ function FileUploader() {
                         </p> */}
                         </div>
                     </div>
-                    <div className='p-6'>
+                    <div className='pt-10'>
                         <input
                             ref={hiddenFileInput}
                             type="file"
@@ -140,7 +141,7 @@ function FileUploader() {
                     </div>
                 </div>
 
-                <div className='flex flex-col p-8'>
+                <div className='flex flex-col px-8'>
                     <h3 className='mt-2 font-bold tracking-tight text-gray-900 dark:text-gray-400'>使用说明</h3>
                     <ol className="flex flex-col mt-2 text-sm text-gray-500 leading-7">
                         <li>
