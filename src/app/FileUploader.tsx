@@ -107,61 +107,65 @@ function FileUploader() {
     };
 
     return (
-        <div className=" space-y-4 flex flex-col items-center">
-            <div className='p-20 flex flex-col items-center'>
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto max-w-2xl text-center">
-                        {/* <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2> */}
-                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-400 sm:text-4xl">
-                            flomo 导出 Markdown
-                        </p>
-                        {/* <p className="mt-6 text-lg leading-8 text-gray-600">
+        <div className=" space-y-4 flex h-screen flex-col items-center">
+            <div className='grow'>
+
+                <div className='p-20 flex flex-col items-center'>
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div className="mx-auto max-w-2xl text-center">
+                            {/* <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2> */}
+                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-400 sm:text-4xl">
+                                flomo 导出 Markdown
+                            </p>
+                            {/* <p className="mt-6 text-lg leading-8 text-gray-600">
                             Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
                             pulvinar et feugiat blandit at. In mi viverra elit nunc.
                         </p> */}
+                        </div>
+                    </div>
+                    <div className='p-6'>
+                        <input
+                            ref={hiddenFileInput}
+                            type="file"
+                            style={{ display: 'none' }}
+                            onChange={handleFileChange}
+                        />
+                        <button
+                            onClick={handleClick}
+                            className="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        >
+                            上传 HTML 文件
+                        </button>
+
                     </div>
                 </div>
-                <div className='p-6'>
-                    <input
-                        ref={hiddenFileInput}
-                        type="file"
-                        style={{ display: 'none' }}
-                        onChange={handleFileChange}
-                    />
-                    <button
-                        onClick={handleClick}
-                        className="py-2 px-4 mb-20 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    >
-                        上传 HTML 文件
-                    </button>
 
+                <div className='flex flex-col'>
+                    <h3 className='mt-2 mb-2 font-bold tracking-tight text-gray-900 dark:text-gray-400'>使用说明</h3>
+                    <ol className="list-decimal flex flex-col">
+                        <li>
+                            <p className=" text-lg leading-8 text-gray-600">
+                                在 <a className='hover:text-indigo-700 text-indigo-600' href='https://v.flomoapp.com/mine?source=account'>flomo</a> 中导出 Memo 的 HTML 文件
+                            </p>
+                        </li>
+                        <li>
+                            <p className=" text-lg leading-8 text-gray-600">
+                                上传 HTML 文件即可获得所有 Memo 的 md 格式压缩包<br />
+                                💡如果你需要上传到 Heptabase 中，可以将所有 md 文件和 <code> file </code> 文件夹放在同一个目录下，<br /> 然后将 file 和 md 文件一起打包成 <code>zip</code> 格式，文件结构如下：
+                                <Image className='max-h-20 w-fit' src={fileImg} alt='文件夹结构示意图' />
+                                最后在 Heptabase 中选择「导入 Obsidian」笔记完成导入。
+                            </p>
+                        </li>
+                    </ol>
                 </div>
-            </div>
 
-            <div className='flex flex-col'>
-                <h3 className='mt-2 mb-2 font-bold tracking-tight text-gray-900 dark:text-gray-400'>使用说明</h3>
-                <ol className="list-decimal flex flex-col">
-                    <li>
-                        <p className=" text-lg leading-8 text-gray-600">
-                            在 <a className='hover:text-indigo-700 text-indigo-600' href='https://v.flomoapp.com/mine?source=account'>flomo</a> 中导出 Memo 的 HTML 文件
-                        </p>
-                    </li>
-                    <li>
-                        <p className=" text-lg leading-8 text-gray-600">
-                            上传 HTML 文件即可获得所有 Memo 的 md 格式压缩包<br />
-                            💡如果你需要上传到 Heptabase 中，可以将所有 md 文件和 <code> file </code> 文件夹放在同一个目录下，<br /> 然后将 file 和 md 文件一起打包成 <code>zip</code> 格式，文件结构如下：
-                            <Image className='max-h-20 w-fit' src={fileImg} alt='文件夹结构示意图' />
-                            最后在 Heptabase 中选择「导入 Obsidian」笔记完成导入。
-                        </p>
-                    </li>
-                </ol>
             </div>
 
             <footer className="">
                 <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://notes.dabing.one" className="hover:underline">Jiang</a>. All Rights Reserved.
-                        </span>
+                        {/* <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://notes.dabing.one" className="hover:underline">Jiang</a>. All Rights Reserved.
+                        </span> */}
                         <div className="flex mt-4 sm:justify-center sm:mt-0">
                             {/* <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
