@@ -14,12 +14,17 @@ function FileUploader() {
     // 文件选择处理器
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files![0]
+        console.log(file);
+
         if (file) {
 
             // setSelectedFile(file)
             handleFileRead(file)
 
         }
+
+        // 每次处理完文件之后，都清空 input 的值
+        event.target.value = "";
     }
 
     // 从 html 中提取 memo
@@ -94,7 +99,6 @@ function FileUploader() {
 
                 const mdPromises = htmlStrList.map((memo: string) => html2md(memo));
                 const mdList = await Promise.all(mdPromises);
-                console.log(mdList);
 
                 createZipFileFromMarkdownStrings(mdList, 'flomo2md')
             }
@@ -108,7 +112,7 @@ function FileUploader() {
     };
 
     return (
-        <div className=" space-y-4 flex h-screen flex-col items-center">
+        <div className="space-y-4 flex h-screen flex-col items-center">
             <div className='grow'>
 
                 <div className='p-20 flex flex-col items-center'>
@@ -146,15 +150,15 @@ function FileUploader() {
                     <ol className="flex flex-col mt-2 text-sm text-gray-500 leading-7">
                         <li>
                             <p className="">
-                                1️⃣ 在 <a className='hover:text-indigo-700 text-indigo-600' href='https://v.flomoapp.com/mine?source=account'>flomo</a> 中导出 Memo 的 HTML 文件
+                                1️⃣ 在 <a className='hover:text-indigo-700 text-indigo-600' href='https://v.flomoapp.com/mine?source=account'>flomo</a> 中导出笔记的 HTML 文件。
                             </p>
                         </li>
                         <li>
                             <p className="">
-                                2️⃣ 上传 HTML 文件即可获得所有 Memo 的 md 格式压缩包<br />
-                                💡如果你需要上传到 Heptabase 中，可以将所有 md 文件和 <code> file </code> 文件夹放在同一个目录下，<br /> 然后将 file 和 md 文件一起打包成 <code>zip</code> 格式，文件结构如下：
+                                2️⃣ 上传 HTML 文件即可获得所有笔记的 md 格式压缩包。<br />
+                                💡如果你需要上传到 Heptabase 中，可以将所有 md 文件和 flomo 导出的 <code className=''>file</code> 文件夹放在同一个目录下，<br /> 然后将它们一起打包成 <code className='py-0.5 px-1 bg-gray-800 text-white rounded-md text-sm font-mono'>zip</code> 格式，解压后的结构如下：
                                 <Image className='max-h-60 w-fit my-2 rounded-sm' src={fileImg} alt='文件夹结构示意图' />
-                                最后在 Heptabase 中选择「导入 Obsidian」笔记完成导入。
+                                最后在 Heptabase 中选择<strong>「导入 Obsidian」</strong>完成导入。
                             </p>
                         </li>
                     </ol>
