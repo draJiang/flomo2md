@@ -114,9 +114,9 @@ function FileUploader() {
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto max-w-2xl text-center">
                             {/* <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2> */}
-                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-400 sm:text-4xl">
+                            <h1 className="text-4xl font-bold tracking-tight dark:text-gray-300 text-gray-900 sm:text-6xl">
                                 flomo 导出 Markdown
-                            </p>
+                            </h1>
                             {/* <p className="mt-6 text-lg leading-8 text-gray-600">
                             Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
                             pulvinar et feugiat blandit at. In mi viverra elit nunc.
@@ -140,19 +140,19 @@ function FileUploader() {
                     </div>
                 </div>
 
-                <div className='flex flex-col'>
-                    <h3 className='mt-2 mb-2 font-bold tracking-tight text-gray-900 dark:text-gray-400'>使用说明</h3>
-                    <ol className="list-decimal flex flex-col">
+                <div className='flex flex-col p-8'>
+                    <h3 className='mt-2 font-bold tracking-tight text-gray-900 dark:text-gray-400'>使用说明</h3>
+                    <ol className="flex flex-col mt-2 text-sm text-gray-500 leading-7">
                         <li>
-                            <p className=" text-lg leading-8 text-gray-600">
-                                在 <a className='hover:text-indigo-700 text-indigo-600' href='https://v.flomoapp.com/mine?source=account'>flomo</a> 中导出 Memo 的 HTML 文件
+                            <p className="">
+                                1️⃣ 在 <a className='hover:text-indigo-700 text-indigo-600' href='https://v.flomoapp.com/mine?source=account'>flomo</a> 中导出 Memo 的 HTML 文件
                             </p>
                         </li>
                         <li>
-                            <p className=" text-lg leading-8 text-gray-600">
-                                上传 HTML 文件即可获得所有 Memo 的 md 格式压缩包<br />
+                            <p className="">
+                                2️⃣ 上传 HTML 文件即可获得所有 Memo 的 md 格式压缩包<br />
                                 💡如果你需要上传到 Heptabase 中，可以将所有 md 文件和 <code> file </code> 文件夹放在同一个目录下，<br /> 然后将 file 和 md 文件一起打包成 <code>zip</code> 格式，文件结构如下：
-                                <Image className='max-h-20 w-fit' src={fileImg} alt='文件夹结构示意图' />
+                                <Image className='max-h-60 w-fit my-2 rounded-sm' src={fileImg} alt='文件夹结构示意图' />
                                 最后在 Heptabase 中选择「导入 Obsidian」笔记完成导入。
                             </p>
                         </li>
