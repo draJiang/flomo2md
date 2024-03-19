@@ -7,3 +7,6 @@ export default function Home() {
     </main>
   );
 }
+
+console.log(123);
+console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);

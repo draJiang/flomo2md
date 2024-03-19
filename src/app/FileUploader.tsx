@@ -89,6 +89,7 @@ function FileUploader() {
 
     // 从文件读取 html 字符串
     const handleFileRead = (selectedFile: File) => {
+
         if (!selectedFile) return;
         const reader = new FileReader();
         reader.onload = async function (event) {
