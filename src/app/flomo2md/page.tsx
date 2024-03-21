@@ -4,7 +4,7 @@ import React, { useState, useRef, ChangeEvent, MouseEvent } from 'react';
 import htmlToMarkdown from '@wcj/html-to-markdown';
 import JSZip from 'jszip';
 import FileSaver from 'file-saver';
-import fileImg from './fileImg.png'
+import fileImg from '../fileImg.png'
 
 function FileUploader() {
     const [selectedFile, setSelectedFile] = useState<File | undefined>();
