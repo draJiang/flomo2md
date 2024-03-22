@@ -47,7 +47,7 @@ export default function Home() {
 
               }}
               className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
-              下载 .crx 安装包 <span aria-hidden="true">→</span>
+              下载离线安装包 <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
