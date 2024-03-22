@@ -41,9 +41,9 @@ export default function Home() {
               href="#"
               onClick={async () => {
 
-                const response = await fetch('https://raw.githubusercontent.com/draJiang/flomo2md/main/src/app/flomo2md.crx');
+                const response = await fetch('https://raw.githubusercontent.com/draJiang/flomo2md/main/src/app/flomo2mdExtention.zip');
                 const blob = await response.blob();
-                saveAs(blob, 'flomo2md.crx');
+                saveAs(blob, 'flomo2mdExtention.zip');
 
               }}
               className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
