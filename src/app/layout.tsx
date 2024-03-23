@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "flomo2md",
   description: "导出 flomo 笔记为 Markdown 格式",
-  icons: {
-    icon: "/favicon.ico"
-  }
+  // icons: {
+  //   icon: "/favicon.ico"
+  // }
 };
 
 export default function RootLayout({
