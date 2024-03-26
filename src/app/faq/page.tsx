@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function Faq() {
     return (
-            <div className='m-4 md:m-20 text-sm'>
+            <div className='mx-4 mt-10 md:m-20 text-sm'>
                 <h1 className='text-4xl text-center'>🙋🏼常见问题</h1>
-                <div className='mt-8 md:mt-16'>
+                <div className='mt-10 md:mt-16'>
                     <section className='mb-8'>
                         <h2 className='mb-2'>🔒我的笔记安全吗？</h2>
                         <p className='text-slate-600 dark:text-slate-400'>
