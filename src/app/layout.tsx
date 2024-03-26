@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import BackgroundColor from './ui/BackgroundColor'
+import Nav from './ui/Nav'
+import Footer from './ui/Footer'
 
 import Script from 'next/script'
 import { Inter } from "next/font/google";
@@ -23,8 +26,9 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <head>
+
         <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-CF0HB84XR9`}
@@ -42,7 +46,16 @@ export default function RootLayout({
 
 
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <BackgroundColor />
+        <main className="flex min-h-screen flex-col items-center">
+          <Nav />
+          <div className="grow">
+            {children}
+          </div>
+          <Footer />
+        </main>
+      </body>
     </html>
   );
 }
