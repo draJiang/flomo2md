@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { saveAs } from 'file-saver';
 import Nav from './ui/Nav'
-import BackgroundColor from './ui/backgroundColor'
+import BackgroundColor from './ui/BackgroundColor'
 
 export default function Home() {
   return (

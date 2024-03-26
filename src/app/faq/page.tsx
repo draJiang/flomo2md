@@ -2,7 +2,7 @@
 
 import Nav from '../ui/Nav'
 import Image from 'next/image';
-import BackgroundColor from '../ui/backgroundColor'
+import BackgroundColor from '../ui/BackgroundColor'
 
 export default function Faq() {
     return (
