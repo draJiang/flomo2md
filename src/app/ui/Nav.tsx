@@ -12,7 +12,8 @@ export default function Nav() {
                         <Image className='rounded-md' src='/icon256.png' width={24} height={24} alt='flomo2md' />
                     </a>
                 </div>
-                <div>
+                <div className='flex'>
+                    <a href='/posts' className='mr-6'>📝博客</a>
                     <a href='/faq'>🙋🏼常见问题</a>
                 </div>
 

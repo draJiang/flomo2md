@@ -50,7 +50,7 @@ export default function RootLayout({
         <BackgroundColor />
         <main className="flex min-h-screen flex-col items-center">
           <Nav />
-          <div className="grow">
+          <div className="grow w-full max-w-2xl">
             {children}
           </div>
           <Footer />
