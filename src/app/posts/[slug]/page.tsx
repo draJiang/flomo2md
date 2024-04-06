@@ -9,7 +9,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 // import { PostBody } from "@/app/_components/post-body";
 // import { PostHeader } from "@/app/_components/post-header";
 
-import 'github-markdown-css'
+// import 'github-markdown-css'
 
 export default async function Post({ params }: Params) {
     const post = getPostBySlug(params.slug);
@@ -21,7 +21,7 @@ export default async function Post({ params }: Params) {
     const content = await markdownToHtml(post.content || "");
 
     return (
-        <main className="markdown-body px-4 md:pt-10 w-full max-w-2xl" style={{ backgroundColor: 'unset' }}>
+        <main className="prose dark:prose-invert px-4 md:pt-10 w-full max-w-2xl" style={{ backgroundColor: 'unset' }}>
             <div dangerouslySetInnerHTML={{ __html: content }} />
         </main >
     );

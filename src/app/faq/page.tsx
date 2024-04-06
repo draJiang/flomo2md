@@ -10,37 +10,39 @@ export const metadata: Metadata = {
 
 export default function Faq() {
     return (
-        <div className='mx-4 mt-10 md:m-20 text-sm'>
-            <h1 className='text-4xl text-center'>🙋🏼常见问题</h1>
-            <div className='mt-10 md:mt-16'>
-
-                <section className='mb-8'>
-                    <h2 className='mb-2'>🔒我的笔记安全吗？</h2>
-                    <p className='text-slate-600 dark:text-slate-400'>
-                        我们不会通过任何方式读取、分析你的笔记，插件的代码已在 <a className='text-indigo-600' href='https://github.com/draJiang/flomo2md-extention'>GitHub 开源</a> 。</p>
+        <div className='prose dark:prose-invert p-4'>
+            <div>
+                <section>
+                    <h2>🔒我的笔记安全吗？</h2>
+                    <p>
+                        我们不会通过任何方式读取、分析你的笔记，插件的代码已在 <a href='https://github.com/draJiang/flomo2md-extention'>GitHub 开源</a> 。</p>
                 </section>
 
-                <section className='mb-8'>
-                    <h2 className='mb-2'>📵离线安装包如何使用？</h2>
-                    <ol className='list-decimal list-inside	text-slate-600 dark:text-slate-400'>
+                <section>
+                    <h2>📵离线安装包如何使用？</h2>
+                    <ol>
                         <li>下载离线安装包后解压 zip 文件</li>
                         <li>在浏览器中打开 chrome://extensions/</li>
                         <li>开启 Developer mode</li>
                         <li>点击 Load unpacked 载入安装包</li>
                         <Image
-                            className='rounded-md mt-2'
                             src='/chromeExtention.png' width={500} height={100} alt='载入离线安装包' />
                     </ol>
                 </section>
 
-                <section className='mb-8'>
-                    <h2 className='mb-2'>🔍标题匹配的规则是什么？</h2>
-                    <p className='text-slate-600 dark:text-slate-400'>当开启「自动识别笔记标题作为文件名」时，将优先匹配 `# ` 符号开头的行（一级标题），若没有则默认取第 1 行文字作为标题（会自动剔除 Tag）。</p>
+                <section>
+                    <h2>💵支持微信/支付宝付款吗？</h2>
+                    <p>如果需要，可以<a  target='_blank' href='mailto:jzlong666@gmail.com?subject=flomo2md：'>联系邮箱</a>获取收款码、产品激活码</p>
                 </section>
 
-                <section className='mb-8'>
-                    <h2 className='mb-2'>➡️如何导入 Heptabase？</h2>
-                    <ol className='list-decimal list-inside	text-slate-600 dark:text-slate-400'>
+                <section>
+                    <h2>🔍标题匹配的规则是什么？</h2>
+                    <p>当开启「自动识别笔记标题作为文件名」时，将优先匹配 `# ` 符号开头的行（一级标题），若没有则默认取第 1 行文字作为标题（会自动剔除 Tag）。</p>
+                </section>
+
+                <section>
+                    <h2>➡️如何导入 Heptabase？</h2>
+                    <ol>
                         <li>在 Heptabase 中点击导入</li>
                         <li>选择导入「Obsidian」</li>
                         <li>选择 flomo2md.zip 文件即可导入</li>
