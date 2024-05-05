@@ -48,6 +48,11 @@ export default function Faq() {
                         <li>选择 flomo2md.zip 文件即可导入</li>
                     </ol>
                 </section>
+
+                <section>
+                    <h2>📙复制笔记到剪切板时为什么不完整</h2>
+                    <p>由于系统限制，单次最多只能复制 5000 字左右，若出现复制不完整的情况请尝试在 flomo 中筛选保留部分笔记后再进行复制。</p>
+                </section>
             </div>
         </div>
 
