@@ -40,7 +40,7 @@ export default function Home() {
 
         <div className='flex flex-col justify-center gap-10 items-center my-8 p-4'>
           <div className='flex flex-col justify-center'>
-            <Image className='h-fit' width={600} height={100} src='/flomo2md1.png' alt='导出文件导入 Obsidian 的效果' />
+            <Image className='h-fit' width={600} height={100} src='/Importing-the-effects-of-obsidian.png' alt='导入 Obsidian 的效果' />
             <p className='text-xs mt-1 text-center	text-slate-500'>导入 Obsidian 的效果</p>
           </div>
           <div className='flex flex-col justify-center'>

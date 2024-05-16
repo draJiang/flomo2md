@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "常见问题-flomo2md",
-    // description: "导出 flomo 笔记为 Markdown 格式",
+    description: "了解产品使用过程中可能存在的问题和解决方案",
 };
 
 export default function Faq() {

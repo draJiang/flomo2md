@@ -41,9 +41,11 @@ export function generateMetadata({ params }: Params): Metadata {
     }
 
     const title = `${post.title}`;
+    const description = `${post.excerpt}`;
 
     return {
         title,
+        description,
         openGraph: {
             title,
             //   images: [post.ogImage.url],
