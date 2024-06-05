@@ -3,6 +3,7 @@ export type Post = {
     slug: string;
     title: string;
     date: string;
+    tag: string;
     //   coverImage: string;
     //   author: Author;
     excerpt: string;
