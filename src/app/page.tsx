@@ -1,11 +1,10 @@
-'use client'
+"use client";
 
-import Image from 'next/image';
-import { saveAs } from 'file-saver';
+import Image from "next/image";
+import { saveAs } from "file-saver";
 
 export default function Home() {
   return (
-
     <div className="mx-auto  mt-16 md:mt-28 px-4 max-w-2xl">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
@@ -18,7 +17,9 @@ export default function Home() {
           <a
             href="#"
             onClick={() => {
-              window.open('https://chromewebstore.google.com/detail/flomo2md/aojbpdcicmaopbmecfjkogighcinoaba')
+              window.open(
+                "https://chromewebstore.google.com/detail/flomo2md/aojbpdcicmaopbmecfjkogighcinoaba"
+              );
             }}
             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
@@ -27,30 +28,51 @@ export default function Home() {
           <a
             href="#"
             onClick={async () => {
-
-              const response = await fetch('https://raw.githubusercontent.com/draJiang/flomo2md/main/src/app/flomo2mdExtention.zip');
+              const response = await fetch(
+                "https://raw.githubusercontent.com/draJiang/flomo2md/main/src/app/flomo2mdExtention.zip"
+              );
               const blob = await response.blob();
-              saveAs(blob, 'flomo2mdExtention.zip');
-
+              saveAs(blob, "flomo2mdExtention.zip");
             }}
-            className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
+            className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+          >
             下载离线安装包 <span aria-hidden="true">→</span>
           </a>
         </div>
 
-        <div className='flex flex-col justify-center gap-10 items-center my-8 p-4'>
-          <div className='flex flex-col justify-center'>
-            <Image className='h-fit' width={600} height={100} src='/Importing-the-effects-of-obsidian.png' alt='导入 Obsidian 的效果' />
-            <p className='text-xs mt-1 text-center	text-slate-500'>导入 Obsidian 的效果</p>
+        <div className="flex flex-col justify-center gap-10 items-center my-8 p-4">
+          <div className="flex flex-col justify-center">
+            <Image
+              className="h-fit"
+              width={440}
+              height={0}
+              src="/1.png"
+              alt="一键导出所有 memo 及其图片"
+            />
+            <p className="text-xs mt-1 text-center	text-slate-500">
+            一键导出所有 memo 及其图片
+            </p>
           </div>
-          <div className='flex flex-col justify-center'>
-            <video controls loop autoPlay src='/copy.mp4' />
-            <p className='text-xs mt-4 text-center	text-slate-500'>直接复制笔记</p>
+          <div className="flex flex-col justify-center">
+            <Image
+              className="h-fit"
+              width={600}
+              height={100}
+              src="/Importing-the-effects-of-obsidian.png"
+              alt="导入 Obsidian 的效果"
+            />
+            <p className="text-xs mt-1 text-center	text-slate-500">
+              导入 Obsidian 支持显示双链
+            </p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <video controls loop autoPlay src="/copy.mp4" />
+            <p className="text-xs mt-4 text-center	text-slate-500">
+              直接复制笔记
+            </p>
           </div>
         </div>
-
       </div>
     </div>
-
   );
 }
