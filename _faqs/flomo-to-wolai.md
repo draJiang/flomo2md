@@ -2,6 +2,7 @@
 title: "flomo 如何导入 wolai 我来"
 excerpt: flomo 导入 wolai。
 date: "2025-02-03"
+tag: "迁移"
 ---
 
 ![wolai](https://jiangzilong-image.oss-cn-beijing.aliyuncs.com/uPic/SA6Hk6.png)

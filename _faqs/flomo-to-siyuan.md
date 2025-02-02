@@ -2,6 +2,7 @@
 title: "flomo 如何导入思源 siyuan 笔记"
 excerpt: flomo 导入思源笔记。
 date: "2025-01-23"
+tag: "迁移"
 ---
 
 ![siyuan](https://jiangzilong-image.oss-cn-beijing.aliyuncs.com/uPic/siyuan2.png)
