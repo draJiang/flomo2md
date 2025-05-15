@@ -12,6 +12,6 @@ tag: "迁移"
 
 2️⃣ 解压导出的 .zip 压缩包，获得文件夹
 
-3️⃣ 在 Bear 熊掌记的菜单中点击 File - Import Form - Markdown Folder
+3️⃣ 在 Bear 熊掌记的菜单中点击 File - Import From - Markdown Folder
 
 ![bear](https://jiangzilong-image.oss-cn-beijing.aliyuncs.com/uPic/CleanShot20250515212207@2x.png)
